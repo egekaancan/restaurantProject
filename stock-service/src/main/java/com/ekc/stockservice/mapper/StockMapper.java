@@ -11,4 +11,5 @@ public interface StockMapper {
     Stock stockRequestToStock(StockRequest stockRequest);
 
     StockResponse stockToStockResponse(Stock stock);
+
 }
