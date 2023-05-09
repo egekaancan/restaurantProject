@@ -49,6 +49,7 @@ public class StockService {
         Stock stock = stockRepository.findById(id)
                 .orElseThrow(RuntimeException::new);
         stockRepository.delete(stock);
+        System.out.println("deleted");
         return stockMapper.stockToStockResponse(stock);
     }
 }
