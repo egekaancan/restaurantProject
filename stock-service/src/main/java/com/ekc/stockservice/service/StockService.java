@@ -33,6 +33,7 @@ public class StockService {
     public StockResponse saveStock(StockRequest stockRequest) {
         Stock stock = stockMapper.stockRequestToStock(stockRequest);
         stockRepository.save(stock);
+        System.out.println("MERGE YEDIRELIM");
         return stockMapper.stockToStockResponse(stock);
     }
 
