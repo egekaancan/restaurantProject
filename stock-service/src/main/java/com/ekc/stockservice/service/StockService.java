@@ -42,6 +42,7 @@ public class StockService {
         stock.setStockType(stockRequest.getStockType());
         stock.setStockName(stockRequest.getStockName());
         stockRepository.save(stock);
+        System.out.println("Hello OWrlf");
         return stockMapper.stockToStockResponse(stock);
     }
 
