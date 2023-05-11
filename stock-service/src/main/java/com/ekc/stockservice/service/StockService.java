@@ -33,6 +33,7 @@ public class StockService {
     public StockResponse saveStock(StockRequest stockRequest) {
         Stock stock = stockMapper.stockRequestToStock(stockRequest);
         stockRepository.save(stock);
+        System.out.println("MERGE YEDIRELIM");
         return stockMapper.stockToStockResponse(stock);
     }
 
@@ -42,6 +43,7 @@ public class StockService {
         stock.setStockType(stockRequest.getStockType());
         stock.setStockName(stockRequest.getStockName());
         stockRepository.save(stock);
+        System.out.println("Hello OWrlf");
         return stockMapper.stockToStockResponse(stock);
     }
 
@@ -49,6 +51,7 @@ public class StockService {
         Stock stock = stockRepository.findById(id)
                 .orElseThrow(RuntimeException::new);
         stockRepository.delete(stock);
+        System.out.println("ACABA NASIL OLACAK");
         return stockMapper.stockToStockResponse(stock);
     }
 }
